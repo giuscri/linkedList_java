@@ -2,24 +2,24 @@ public class Node {
 
     public Node(int value) {
 	this.value = value;
-	this.leftRef = null;
-	this.rightRef = null;
+	this.leftNode = null;
+	this.rightNode = null;
     }
     
-    public void setLeftRef(Node other) {
-        this.leftRef = other;
+    public void setLeftNode(Node other) {
+        this.leftNode = other;
     }
     
-    public void setRightRef(Node other) {
-        this.rightRef = other;	
+    public void setRightNode(Node other) {
+        this.rightNode = other;	
     }
     
-    public Node getLeftRef() {
-        return leftRef;
+    public Node getLeftNode() {
+        return leftNode;
     }
     
-    public Node getRightRef() {
-        return rightRef;
+    public Node getRightNode() {
+        return rightNode;
     }
     
     public int getValue() {
@@ -31,7 +31,7 @@ public class Node {
     }
     
     private int value;
-    private Node leftRef;
-    private Node rightRef;
+    private Node leftNode;
+    private Node rightNode;
 
 }

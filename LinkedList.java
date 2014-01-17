@@ -9,10 +9,10 @@ public class LinkedList {
 
     public void link(Node n) {
         Node tmp = null;
-	for (tmp=first; tmp.getRightRef()!=null; tmp=tmp.getRightRef())
+	for (tmp=first; tmp.getRightNode()!=null; tmp=tmp.getRightNode())
 	    ;
-	tmp.setRightRef(n);
-	n.setLeftRef(tmp);
+	tmp.setRightNode(n);
+	n.setLeftNode(tmp);
     }
     
     public boolean isEmpty() {
@@ -28,26 +28,26 @@ public class LinkedList {
     
     
 	if (n.getValue() < first.getValue()) {
-	    first.setLeftRef(n);
-	    n.setRightRef(first);
+	    first.setLeftNode(n);
+	    n.setRightNode(first);
 	    first = n;
 	    return;
 	}
 	
-	Node tmp = first.getRightRef();
-	for (; tmp!=null; tmp=tmp.getRightRef()) {
+	Node tmp = first.getRightNode();
+	for (; tmp!=null; tmp=tmp.getRightNode()) {
 	    if (n.getValue() < tmp.getValue()) {
-	        tmp.getLeftRef().setRightRef(n);
-		n.setLeftRef(tmp.getLeftRef());
-		n.setRightRef(tmp);
-		tmp.setLeftRef(n);
+	        tmp.getLeftNode().setRightNode(n);
+		n.setLeftNode(tmp.getLeftNode());
+		n.setRightNode(tmp);
+		tmp.setLeftNode(n);
 		return;
 	    }
 	}
 	
 	if (last.getValue() < n.getValue()) {
-	    last.setRightRef(n);
-	    n.setLeftRef(last);
+	    last.setRightNode(n);
+	    n.setLeftNode(last);
 	    last = n;
 	    return;
 	}
@@ -58,7 +58,7 @@ public class LinkedList {
         StringBuffer sb = new StringBuffer("[  ");
     
         Node tmp = first;
-	for (; tmp!=null; tmp=tmp.getRightRef())
+	for (; tmp!=null; tmp=tmp.getRightNode())
 	    sb.append(tmp+"  ");
 	
 	sb.append("]");
