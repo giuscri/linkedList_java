@@ -7,4 +7,4 @@ Starting from [this](http://www.codinghorror.com/blog/2007/02/why-cant-programme
 
 I started thinking if _I_ could design a linked list.
 
-Hence, this is a simple implementation of what I though _might_ be a linked list (not sure this is what the article refers to ...).
+Hence, this is a simple implementation of what I think _might_ be a linked list (not sure this is what the article refers to ...).
